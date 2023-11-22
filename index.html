@@ -49,6 +49,7 @@
         function setBottomHeight() {
             var isMobile = window.matchMedia('(max-width: 980px)').matches;
             console.log("Viewport width: " + window.innerWidth);
+            console.log("Viewport width (documentElement): " + document.documentElement.clientWidth);
             // if(window.innerWidth <= 981){
             //     isMobile = true;
             // }
