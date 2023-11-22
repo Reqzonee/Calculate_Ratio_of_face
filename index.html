@@ -43,6 +43,29 @@
         }
 
     </style>
+    
+<script>
+        // JavaScript to dynamically set the height of the .bottom div
+        function setBottomHeight() {
+            var isMobile = window.matchMedia('(max-width: 981px)').matches;
+            console.log("Viewport width: " + window.innerWidth);
+            console.log("I am inside func");
+            var bottomDiv = document.querySelector('.bottom');
+            console.log(isMobile);
+            if(isMobile){
+                console.log("Yes mobile");
+            }
+            bottomDiv.style.height = isMobile ? '822px' : '199px';
+        }
+
+        // Call the function on page load
+        window.addEventListener('load', setBottomHeight);
+
+        // Optionally, you can also add an event listener to adjust the height on window resize
+        window.addEventListener('resize', setBottomHeight);
+        console.log("I am inside js");
+</script>
+
 </head>
 <body>
     <h1>See Your Facial Width and Height Ratio</h1> <!-- Add the heading here -->
